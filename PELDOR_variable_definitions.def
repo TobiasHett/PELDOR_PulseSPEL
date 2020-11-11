@@ -1,0 +1,49 @@
+; Double Electron-Electron Resonance
+; PulseSPEL general variables, definitions & conventions
+;     
+begin defs
+; Variables    ; Comments
+
+p0   = 12      ; 90 pulse length, pi/2
+p1   = 24      ; 180 pulse length, pi
+p2   = 16      ; pump pulse length
+p3   = 2       ; the shortest accessible p2
+p4   = 2       ; same as p3 (superseeded)
+
+pg   = 24      ; Integrator Gate Width
+d0   = 360     ; Detection Trigger offset time
+
+d1   = 232     ; tau1
+d2   = 3000    ; tau2
+d3   = 100     ; deadtime delay between probe pi-pulse and first position of pump pulse
+
+d4   = 400     ; T for pump pulse optimization 
+d5   = 500     ; same as d4 (superseeded)
+d6   = 2       ; increment for pump pulse length
+d9   = 0       ; DAF (Delay After Flash)
+d10  = 232     ; same as tau1 (superseeded)
+d11  = 100     ; same as deadtime delay(superseeded)
+d12  = 3232    ; same as (tau1 + tau2 - deadtime delay) (superseeded)
+d13  = 100     ; same as deadtime delay (superseeded)
+
+d30  = 8       ; 1st time scale increment
+d31  = 16      ; 2nd time scale increment (for modulation averaging)
+
+a    = 50      ; number of transient averages (TRANS)
+h    = 10      ; number of shots per point (INTG and SPT)
+n    = 1       ; number of sweeps to accumulate
+m    = 8       ; number of tau1 increments (for modulation averaging)
+
+srt  = 3000 * srtu ; (RESERVED) SRT - Shot Repetition Time (srtu=1.02 us)
+
+b    = 1       ;
+c    = 1       ;
+r    = 1       ;
+w    = 180     ; Split point of sweeps (points)
+               ; i.e. pulse separation where TWT gate pulse can be split
+s    = 300     ; Sweep length (n. of data really taken)   ( counter: X )
+t    = 1       ; Second time axsis sweep length           ( counter: Y )
+dx   = 0       ; 1st time scale starting value
+dy   = 0       ; 2nd time scale starting value
+end defs
+
